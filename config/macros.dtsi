@@ -34,3 +34,39 @@ label = "macro_kinesis";
 #binding-cells = <0>;
 bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
 };
+macro_ue_mac: macro_ue_mac{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_ue_mac";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp F &kp C>
+    , <&macro_release &kp LALT>
+    ;
+};
+macro_oe_mac: macro_oe_mac{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_oe_mac";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp F &kp KP_N6>
+    , <&macro_release &kp LALT>
+    ;
+};
+macro_ae_mac: macro_ae_mac{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_ae_mac";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp LALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp E &kp KP_N4>
+    , <&macro_release &kp LALT>
+    ;
+};
