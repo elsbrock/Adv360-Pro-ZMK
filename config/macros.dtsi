@@ -34,6 +34,7 @@ label = "macro_kinesis";
 #binding-cells = <0>;
 bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
 };
+
 macro_ue_mac: macro_ue_mac{
 compatible = "zmk,behavior-macro";
 wait-ms = <40>;
@@ -68,5 +69,79 @@ bindings
     = <&macro_press   &kp LALT>
     , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp E &kp KP_N4>
     , <&macro_release &kp LALT>
+    ;
+};
+
+macro_ue_linux: macro_ue_linux{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_ue_linux";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp LCTL &kp LSFT &kp KC_U>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp F &kp C>
+    , <&macro_release &kp LCTL &kp LSFT &kp KC_U>
+    ;
+};
+macro_oe_linux: macro_oe_linux{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_oe_linux";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp LCTL &kp LSFT &kp KC_U>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp F &kp KP_N6>
+    , <&macro_release &kp LCTL &kp LSFT &kp KC_U>
+    ;
+};
+macro_ae_linux: macro_ae_linux{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_ae_linux";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp LCTL &kp LSFT &kp KC_U>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp E &kp KP_N4>
+    , <&macro_release &kp LCTL &kp LSFT &kp KC_U>
+    ;
+};
+
+macro_ue_win: macro_ue_win{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_ue_win";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp KC_RALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp F &kp C>
+    , <&macro_release &kp KC_RALT>
+    ;
+};
+macro_oe_win: macro_oe_win{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_oe_win";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp KC_RALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp F &kp KP_N6>
+    , <&macro_release &kp KC_RALT>
+    ;
+};
+macro_ae_win: macro_ae_win{
+compatible = "zmk,behavior-macro";
+wait-ms = <40>;
+tap-ms = <40>;
+label = "macro_ae_win";
+#binding-cells = <0>;
+bindings
+    = <&macro_press   &kp KC_RALT>
+    , <&macro_tap     &kp KP_N0 &kp KP_N0 &kp E &kp KP_N4>
+    , <&macro_release &kp KC_RALT>
     ;
 };
